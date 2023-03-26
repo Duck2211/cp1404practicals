@@ -1,27 +1,30 @@
-"""
-CP1404/CP5632 - Practical
-Pseudocode for temperature conversion
-"""
-
-MENU = """C - Convert Celsius to Fahrenheit
-F - Convert Fahrenheit to Celsius
-Q - Quit"""
-print(MENU)
-choice = input(">>> ").upper()
-while choice != "Q":
-    if choice == "C":
-        celsius = float(input("Celsius: "))
-        fahrenheit = celsius * 9.0 / 5 + 32
-        print(f"Result: {fahrenheit:.2f} F")
-    elif choice == "F":
-        # TODO: Write this section to convert F to C and display the result
-        # Hint: celsius = 5 / 9 * (fahrenheit - 32)
-        # Remove the "pass" statement when you are done. It's a placeholder.
-        temperature = float(input("fahrenheit:"))
-        result = 5/9 *  (temperature-32)
-        print(f"Result: {result:.2f} C")
-    else:
-        print("Invalid option")
-    print(MENU)
+def main():
+    print("C - Convert Celsius to Fahrenheit\nF - Convert Fahrenheit to Celsius\nQ - Quit")
     choice = input(">>> ").upper()
-print("Thank you.")
+    while choice != "Q":
+        if choice == "C":
+            celsius = float(input("Celsius: "))
+            result=celsius_to_fahrenheit(celsius)
+            print(f"Result: {result:.2f} C")
+        elif choice == "F":
+            fahrenheit = float(input("fahrenheit:"))
+            result=fahrenheit_to_celsius(fahrenheit)
+            print(f"Result: {result:.2f} C")
+        else:
+            print("Invalid option")
+        print("C - Convert Celsius to Fahrenheit\nF - Convert Fahrenheit to Celsius\nQ - Quit")
+        choice = input(">>> ").upper()
+    print("Thank you.")
+
+
+def celsius_to_fahrenheit(celsius):
+    result = celsius * 9.0 / 5 + 32
+    return result
+
+
+def fahrenheit_to_celsius(fahrenheit):
+    result = 5 / 9 * (fahrenheit - 32)
+    return result
+
+
+main()
