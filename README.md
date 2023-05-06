@@ -2,7 +2,7 @@
 
 ## Duc Trung Nguyen; id-14212302
 
- Things I have learned so far in this subject in terms of "clean code"
+ Things I have learned so far in this subject in terms of "clean code" in this class:
 
 1: I have learned to make my code as simple as possible so others can fully understand my code properly without to look deep
 
